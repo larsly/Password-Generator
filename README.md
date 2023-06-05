@@ -6,7 +6,7 @@
 
 ### Skills Used
 
-
+In this assignment I used dialogue boxes to include selected criteria in our randomly generated password. 
 
 
 ## Installation

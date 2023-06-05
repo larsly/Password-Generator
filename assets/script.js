@@ -16,14 +16,21 @@ function generatePassword() {
         alert(length + " is not a valid number");
     }
   }
-
-  var hasSpecialCharacters = confirm("Would you like special characters?");
-
-  var hasNumbers = confirm("Would you like numbers?");
-
-  var hasUppercase = confirm("Would you like uppercase letters?");
-
-  var hasLowercase = confirm("Would you like lowercase letters?");
+  while(true) {
+    var hasSpecialCharacters = confirm("Would you like special characters?");
+  
+    var hasNumbers = confirm("Would you like numbers?");
+  
+    var hasUppercase = confirm("Would you like uppercase letters?");
+  
+    var hasLowercase = confirm("Would you like lowercase letters?");
+    // won't print anything if nothing is selected and reroutes you
+    if (hasSpecialCharacters || hasNumbers || hasUppercase || hasLowercase) {
+      break;
+    } else {
+      alert("At least one input type MUST be selected!")
+    }
+  }
 
   
   var chars = '';
@@ -60,7 +67,7 @@ function generatePassword() {
   };
   return password;
 };
-
+// to ensure proper characters are included
 function validate (flag, string, charset) {
   if (flag) {
     for (let i = 0; i < charset.length; i++) {
